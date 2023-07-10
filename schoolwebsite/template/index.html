@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+              <a class="btn btn-success" href="{% url 'login' %}">Login</a>
+        </li>
+        <li class="nav-item">
+              <a class="btn btn-success" href="{% url 'register' %}">Register</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Departments
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science">Computer Science</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Chemistry">Chemistry</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce">Commerce</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Physics">Physics</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Politics">Politics</a></li>
+            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Mathematics">Maths</a></li>
+
+          </ul>
+        </li>
+
+      </ul>
+      </div>
+  </nav>
+   <div class="row" >
+    <div class="col-md-12">
+        <img src="{% static 'images\college.jpg' %}" alt="noimage" height="400px" width="100%">
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col-md-12">
+<h6>The vision of the college is to help the students achieve academic excellence and play the role of socially responsible individuals by including social values.
+All the efforts are directed towards the achievement of this vision.</h6>
+    </div>
+  </div>
+</div>
+{% endblock %}
